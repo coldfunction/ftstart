@@ -3,7 +3,7 @@
 WORKSPACE=/home/coldfunction/data
 
 #sudo $WORKSPACE/reset.sh
-sudo killall qemu-system-x86_64
+sudo kill -9 $(ps aux | grep qemu | awk '{print $2}')
 sudo killall xterm
 
 echo "run primary VM"
